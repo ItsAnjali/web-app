@@ -26,11 +26,11 @@ const App = () => {
 
   return (
     <div className="app" style={{ transform: `scale(${scale})` }}>
-      {/* Navbar */}
+      
       <Navbar collapsed={collapsed} setCollapsed={setCollapsed}/>
 
       <div className="content">
-        {/* Left Menu */}
+        
         <div className={`left-menu ${collapsed ? "collapsed" : ""}`}>
           <ul>
             <li>
@@ -51,13 +51,13 @@ const App = () => {
           </ul>
         </div>
 
-        {/* Main Content */}
+      
         <main className="main-content">
           <h1>Welcome to AnnyBrand's Advanced Responsive Webpage</h1>
           <p>This page adapts beautifully to different screen sizes with enhanced UI/UX elements.</p>
         </main>
 
-        {/* Right Panel */}
+ 
         <div className="right-panel">
           <h2>Recent Activities</h2>
           <div className="activity">
@@ -71,7 +71,6 @@ const App = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="footer">© 2025 AnnyBrand. All rights reserved.</footer>
     </div>
   );
