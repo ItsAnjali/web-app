@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import Leftpanel from "./Leftpanel";
+import Rightpanel from "./Rightpanel";
+import Main from "./Main";
 import "./App.css";
 
 const App = () => {
@@ -28,50 +31,9 @@ const App = () => {
     <div className="app" style={{ transform: `scale(${scale})` }}>
       
       <Navbar collapsed={collapsed} setCollapsed={setCollapsed}/>
-
-      <div className="content">
-        
-        <div className={`left-menu ${collapsed ? "collapsed" : ""}`}>
-          <ul>
-            <li>
-              <i className="fas fa-home"></i> Dashboard
-            </li>
-            <li>
-              <i className="fas fa-user"></i> Profile
-            </li>
-            <li>
-              <i className="fas fa-envelope"></i> Messages
-            </li>
-            <li>
-              <i className="fas fa-cogs"></i> Settings
-            </li>
-            <li>
-              <i className="fas fa-sign-out-alt"></i> Logout
-            </li>
-          </ul>
-        </div>
-
       
-        <main className="main-content">
-          <h1>Welcome to AnnyBrand's Advanced Responsive Webpage</h1>
-          <p>This page adapts beautifully to different screen sizes with enhanced UI/UX elements.</p>
-        </main>
-
- 
-        <div className="right-panel">
-          <h2>Recent Activities</h2>
-          <div className="activity">
-            <img src="https://dhramshala.in/wp-content/uploads/2023/10/prem-mandir.jpg" alt="Activity 1" />
-            <p>Added a new product listing</p>
-          </div>
-          <div className="activity">
-            <img src="https://wandersky.in/wp-content/uploads/2023/08/Untitled-design-24.png" alt="Activity 2" />
-            <p>Updated settings</p>
-          </div>
-        </div>
-      </div>
-
-      <footer className="footer">© 2025 AnnyBrand. All rights reserved.</footer>
+      <Main collapsed={collapsed}/>
+      <footer className="footer">© 2025 LetsTour.</footer>
     </div>
   );
 };
