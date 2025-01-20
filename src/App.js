@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import Leftpanel from "./Leftpanel";
-import Rightpanel from "./Rightpanel";
 import Main from "./Main";
 import "./App.css";
 
@@ -9,9 +7,6 @@ const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [scale, setScale] = useState(1);
 
-  /*
-  width=window.innerwidth*scale
-  */ 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
